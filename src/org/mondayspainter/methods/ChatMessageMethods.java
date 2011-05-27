@@ -16,7 +16,7 @@ public class ChatMessageMethods {
 		deleteAllMessagesButLast20();
 		
 		//compare word
-		Object o;
+		String s = "Jetzt wünsche ich Dir eine erholsame Nacht!";
 	}
 	
 	public void deleteAllMessagesButLast20() {
