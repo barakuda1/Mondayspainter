@@ -16,7 +16,7 @@ public class ChatMessageMethods {
 		deleteAllMessagesButLast20();
 		
 		//compare word
-		
+		Object o;
 	}
 	
 	public void deleteAllMessagesButLast20() {
