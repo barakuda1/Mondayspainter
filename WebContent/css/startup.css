@@ -1,0 +1,25 @@
+body {
+	background-image: url("../img/bg.jpg");
+    color: #564b47;
+    font-size: 0.8em;
+    font-family:  'Lucida Grande', Verdana, Arial, sans-serif;
+  	padding: 100px;
+  	margin: 0px;
+}
+
+#startUpForm {
+	width: 700px;
+	height: 200px;
+	background-color: #fff;
+	border: 1px solid #564b47;
+	padding: 0px;
+    margin: 0px auto;
+}
+
+#playerName {
+	margin-left: 20px;
+}
+
+#logInButton, #resetButton, #playerPassword, #startUpPasswordText, #startUpUsernameText {
+	margin-left: 50px;	
+}

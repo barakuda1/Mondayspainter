@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+<h:head>
+    <title>#{message.browser_title}</title>
+    <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/startup.css" />
+</h:head>
+<h:body>
+    <h:form id="startUpForm">
+        <h1>
+        	<h:outputText id="startUpWelcomeText"
+        		value="#{message.index_welcome}"/>
+        </h1>
+        
+        <h:panelGrid id="logIn" columns="1">
+        	<h:panelGroup>
+        		<h:outputText id="startUpUsernameText" 
+        			value="#{message.index_username}" />
+        		
+        		<h:inputText id="playerName" 
+        			value="#{game.player.name}" 
+        			binding="#{loginBackingBean.userNoComponent}" 
+        			required="true" />
+        		
+        		<h:message id="messagePlayerName"
+        			for="playerName" 
+        			layout="table" 
+        			showSummary="false" 
+        			showDetail="true"
+        			errorStyle="color:red" />
+        	</h:panelGroup>
+        	
+        	<h:panelGroup>
+        		<h:outputText id="startUpPasswordText" 
+        			value="#{message.index_password}" />
+        		
+        		<h:inputSecret id="playerPassword" 
+        			required="true" 
+        			validator="#{loginBackingBean.validatePassword}"/>
+        			
+        		<h:message id="messagePlayerPassword"
+        			for="playerPassword" 
+        			layout="table" 
+        			showSummary="false" 
+        			showDetail="true"
+        			errorStyle="color:red" />
+			</h:panelGroup>
+        </h:panelGrid> 
+        
+        <h:commandButton id="logInButton" 
+        	value="#{message.index_login}" 
+        	action="#{game.logIn}" />
+        	
+        <h:commandButton id="resetButton" 
+        	value="#{message.index_cancel}" 
+        	type="reset" />  
+        	
+        <h:commandLink value="#{message.index_bemember}" 
+        	action="/bemember.xhtml" 
+        	immediate="true"/>
+    </h:form>
+</h:body>
+</html>  

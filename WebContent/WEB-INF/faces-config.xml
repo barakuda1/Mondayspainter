@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+		version="2.0">
+	
+	<!-- Settings for application -->
+	<application>
+		<locale-config>
+			<default-locale>de</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+		<message-bundle>org.mondayspainter.messages.messages</message-bundle>
+		<resource-bundle>
+			<base-name>org.mondayspainter.messages.messages</base-name>
+			<var>message</var>
+		</resource-bundle>
+	</application>
+	<!-- **************** -->
+	
+	<!-- Navigation rules -->
+	<navigation-rule>
+	    <from-view-id>/index.xhtml</from-view-id> 
+	    <navigation-case> 
+	      <from-action>#{game.logIn}</from-action>
+	      <from-outcome>logInAllowed</from-outcome>
+	      <to-view-id>/game.xhtml</to-view-id>
+	    </navigation-case> 
+	    <navigation-case>
+	    	<from-action>#{game.logIn}</from-action>
+	    	<from-outcome>logInNotAllowed</from-outcome>
+	    	<to-view-id>/index.xhtml</to-view-id>
+	    </navigation-case>
+	</navigation-rule>
+	<!-- **************** -->
+
+</faces-config>

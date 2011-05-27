@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+<h:head>
+    <title>#{message.browser_title}</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="farbtastic/farbtastic.js"></script>
+	<script type="text/javascript" src="js/mondayspainter.js"></script>
+	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<link rel="stylesheet" href="farbtastic/farbtastic.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+</h:head>
+<h:body>
+	
+	<script>
+		$(function() {
+				chat.init();
+				$('#colorpicker').farbtastic(function(color){
+				mondayspainter.setColor(color);
+				
+			});
+		});
+	</script>
+	
+	<div id="bWrapper">
+		<img src="img/logo.png"/>
+		<div>
+		<div id="toolbar">
+			<img src="img/pen.png" id="pen" />
+			<img src="img/eraser.png" id="eraser" />
+			<div id="thikness">
+				<div><img src="img/thikness.png" thikness="1" /></div>
+				<div><img src="img/thikness.png" thikness="2" /></div>
+				<div><img src="img/thikness.png" thikness="3" /></div>
+				<div><img src="img/thikness.png" thikness="4" /></div>
+				<div><img src="img/thikness.png" thikness="5" /></div>
+				<div><img src="img/thikness.png" thikness="15" /></div>
+			</div>
+		</div>
+		<div id="mondayspainterContainer">
+			<canvas id="mondayspainter" style="border: 1px solid grey;" width="600" height="600">
+				<p>Unterstütze Browser: 
+				<a href="http://www.opera.com">Opera</a>, 
+				<a href="http://www.mozilla.com">Firefox</a>, 
+				<a href="http://www.apple.com/safari">Safari</a>, 
+				<a href="http://www.konqueror.org">Konqueror</a></p>
+			</canvas>
+		</div>
+		<div id="colorbar">
+			<div><img src="img/color.png" color="#f21331" /></div>
+			<div><img src="img/color.png" color="#0f58f6" /></div>
+			<div><img src="img/color.png" color="#11c4f5" /></div>
+			<div><img src="img/color.png" color="#f19217" /></div>
+			<div><img src="img/color.png" color="#cf17f1" /></div>
+			<div><img src="img/color.png" color="#20f213" /></div>
+			<div><img src="img/color.png" color="#000000" /></div>
+		</div>
+		</div>
+		<img src="img/reset.png" alt="reset" id="clear" />
+	</div>
+	<div id="chat">
+		<div id="chathistory"></div> 
+		<input type="text" id="chatmsg" />
+		<button>senden</button>
+	</div>
+	
+	<div id="colorpicker"></div>
+
+</h:body>
+</html>  

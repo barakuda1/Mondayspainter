@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+<h:head>
+    <title>#{message.browser_title}</title>
+    <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/bemember.css" />
+</h:head>
+<h:body>
+    <h:form id="beMemberForm">
+        <h1>
+        	<h:outputText id="beMemberText"
+        		value="#{message.bemember_welcome}"/>
+        </h1>
+        
+        <h:panelGrid id="beMemberGrid" columns="1">
+        	<h:panelGroup>
+        		<h:outputText id="beMemberUsernameText" 
+        			value="#{message.bemember_username}" />
+        		
+        		<h:inputText id="playerName" 
+        			value="#{beMember.username}" 
+        			required="true" />
+        		
+        		<h:message id="messagePlayerName"
+        			for="playerName" 
+        			layout="table" 
+        			showSummary="false" 
+        			showDetail="true"
+        			errorStyle="color:red" />
+        	</h:panelGroup>
+        	
+        	<h:panelGroup>
+        		<h:outputText id="beMemberPasswordText" 
+        			value="#{message.bemember_password}" />
+        		
+        		<h:inputSecret id="playerPassword" 
+        			value="#{beMember.password}"
+        			required="true" />
+        			
+        		<h:message id="messagePlayerPassword"
+        			for="playerPassword" 
+        			layout="table" 
+        			showSummary="false" 
+        			showDetail="true"
+        			errorStyle="color:red" />
+			</h:panelGroup>
+        </h:panelGrid> 
+        
+        <h:panelGrid id="beMemberButtonGrid" columns="1">
+	        <h:panelGroup>
+		        <h:commandButton id="submitButton" 
+		        	value="#{message.bemember_submit}" 
+		        	action="#{beMember.askForMembership}" />
+		        	
+		        <h:commandButton id="resetButton" 
+		        	value="#{message.bemember_cancel}" 
+		        	type="reset" />
+	        </h:panelGroup>
+	        
+	        <h:message id="messageAskForMembership"
+	        	for="submitButton"
+	        	layout="table"
+	        	showSummary="false"
+	        	showDetail="true"
+	        	errorStyle="color:red" /> 
+        </h:panelGrid>  
+    </h:form>
+</h:body>
+</html>  

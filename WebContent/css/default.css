@@ -1,0 +1,99 @@
+body {
+	background: url(../img/bg.jpg) fixed no-repeat;
+}
+
+#bWrapper {
+	margin: auto;
+	width: 806px;
+	height: 700px;
+	padding: 30px;
+	background: url(../img/wrapperbg.png) repeat;
+	-moz-border-radius: 30px;
+	margin-top: 15px;
+	padding-top: 10px;
+}
+
+#mondayspainter {
+	position: absolute;
+	background: #fff;
+}
+
+#mondayspainterContainer {
+	width: 600px;
+	border: 1px solid #fff;
+	margin-left: 12px;
+}
+
+#mondayspainterContainer, #toolbar, #colorbar {
+	float: left;
+}
+
+#toolbar, #colorbar {
+	width: 90px;
+	height: 600px;
+	padding-top: 22px;
+}
+
+#colorbar {
+	padding-left: 6px;
+	padding-top: 12px;
+}
+
+#colorbar div {
+	width: 64px;
+	height: 64px;
+	margin-top: 10px;
+	float: left;
+}
+
+#colorbar div img {
+	width: 64px;
+	height: 64px;
+}
+
+#thikness div {
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#load {
+	width: 780px;
+	background: url(../img/loadbg.png) repeat-x;
+	margin: auto;
+	height: 25px;
+	border: 1px solid grey;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 40px;
+	-moz-border-radius: 4px;
+	text-shadow: 1px 1px grey;
+}
+
+#clear {
+	cursor: pointer;
+	margin-left: 10px;;
+}
+
+#chat {
+	margin: auto;
+	width: 806px;
+	height: 110px;
+	padding: 30px;
+	background: url(../img/wrapperbg.png) repeat;
+	-moz-border-radius: 30px;
+	margin-top: 15px;
+	padding-top: 10px;
+	position: relative;
+}
+
+#chathistory {
+	width: 100%;
+	height: 106px;
+	overflow: auto;
+}
+
+#chatmsg {
+	width: 700px;	
+	margin-left: 0px;
+}
